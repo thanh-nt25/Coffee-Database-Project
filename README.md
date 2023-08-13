@@ -9,3 +9,4 @@ DBMS includes the following functions:
 - Display menu
 - Order/ display the available order
 - Automatically calculate payment bills
+![Picture of Design](https://github.com/thanh-nt25/Database-Project/blob/master/Design%20of%20DBMS.png)

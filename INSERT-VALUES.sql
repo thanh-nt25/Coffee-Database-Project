@@ -19,32 +19,32 @@ INSERT INTO tablefoods VALUES
 ('1','Bàn số 1','0'),
 ('2','Bàn số 2','0'),
 ('3','Bàn số 3','0'),
-('4','Bàn số 4','1'),
+('4','Bàn số 4','0'),
 ('5','Bàn số 5','0'),
-('6','Bàn số 6','1'),
+('6','Bàn số 6','0'),
 ('7','Bàn số 7','0'),
 ('8','Bàn số 8','0'),
-('9','Bàn số 9','1'),
+('9','Bàn số 9','0'),
 ('10','Bàn số 10','0'),
 ('11','Bàn số 11','0'),
-('12','Bàn số 12','1'),
+('12','Bàn số 12','0'),
 ('13','Bàn số 13','0'),
 ('14','Bàn số 14','0'),
-('15','Bàn số 15','1'),
+('15','Bàn số 15','0'),
 ('16','Bàn số 16','0'),
-('17','Bàn số 17','1'),
+('17','Bàn số 17','0'),
 ('18','Bàn số 18','0'),
 ('19','Bàn số 19','0'),
 ('20','Bàn số 20','0'),
-('21','Bàn số 21','1'),
+('21','Bàn số 21','0'),
 ('22','Bàn số 22','0'),
 ('23','Bàn số 23','0'),
-('24','Bàn số 24','1'),
+('24','Bàn số 24','0'),
 ('25','Bàn số 25','0'),
 ('26','Bàn số 26','0'),
-('27','Bàn số 27','1'),
+('27','Bàn số 27','0'),
 ('28','Bàn số 28','0'),
-('29','Bàn số 29','1'),
+('29','Bàn số 29','0'),
 ('30','Bàn số 30','0');
 
 
@@ -515,4 +515,11 @@ INSERT INTO Billinfos VALUES
 ('88','16','1');
 
 UPDATE Billinfos
+SET status = '1';
+SELECT setval('bills_billid_seq', (SELECT MAX(billid) FROM Bills));
+SELECT setval('foodCategorys_categoryid_seq', (SELECT MAX(categoryid) FROM foodcategorys));
+SELECT setval('foods_foodid_seq', (SELECT MAX(foodid) FROM foods));
+UPDATE bills
+SET status = '0';
+UPDATE bills
 SET status = '1';

@@ -30,7 +30,7 @@ CREATE TABLE Bills (
   timecheckin TIME DEFAULT CURRENT_TIME,
   timecheckout TIME DEFAULT '00:00:00',
   date DATE DEFAULT CURRENT_DATE,
-  tableid INT NOT NULL, -- tham chieu den tableid trong tablefoods
+  tableid INT NOT NULL,
   status INT DEFAULT 0,
   total FLOAT DEFAULT 0,
   FOREIGN KEY (phonenumber) REFERENCES Accounts(phonenumber),
